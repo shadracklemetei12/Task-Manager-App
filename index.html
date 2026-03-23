@@ -3,25 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To-Do List App</title>
+    <title>Task Manager App</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
         <div class="todo-app">
-            <h2>To-Do List<img src="icon.png"></h2>
+            <h2>
+                Task Manager
+                <span class="icon">📋</span>
+            </h2>
             <div class="row">
-                <input type="text" id="input-box" placeholder="add your text">
-                <button onclick="AddTask()">Add</button>
+                <input type="text" id="input-box" placeholder="Add a new task...">
+                <button onclick="AddTask()">Add Task</button>
             </div>
             <ul id="list-container">
-                <li class="checked">Task 1</li>
-                <li>Task 2</li>
-                <li>Task 3</li>
-                <li>Task 4</li>
+                <!-- Tasks will be loaded from localStorage -->
             </ul>
+            <div class="stats">
+                <span id="total-tasks">0</span> tasks total •
+                <span id="completed-tasks">0</span> completed
+            </div>
         </div>
     </div>
- <script src="script.js"></script>   
+    <script src="script.js"></script>
 </body>
 </html>
